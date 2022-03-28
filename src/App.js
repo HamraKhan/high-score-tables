@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import Heading from "./Heading";
+import HighScoreTitle from "./HighScoreTitle";
+import ScoreTable from "./ScoreTable";
 
 function App() {
+  const scores = [
+    { n: "rahman", s: 700200 },
+    { n: "rayhan", s: 18238123 },
+    { n: "ali", s: 5400000 },
+  ];
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Heading />
+      <div>
+        <HighScoreTitle country={'Bangladesh'}/>
+        <ScoreTable scores={scores}/>
+      </div>
+    </>
   );
 }
 
