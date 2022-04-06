@@ -7,10 +7,10 @@ function App() {
   return (
     <>
       <Heading />
-      <div>
+      <div className="score-table-container">
         {allCountryScores.map((countryScore) => {
           return (
-          <div>
+          <div className="country-score-container">
             <HighScoreTitle country={countryScore.country} />
             <ScoreTable scores={countryScore.scores} />
           </div>)
